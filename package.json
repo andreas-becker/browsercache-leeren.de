@@ -1,0 +1,35 @@
+{
+  "name": "browsercache-leeren.de",
+  "version": "1.0.0",
+  "description": "Browsercache leeren leicht gemacht",
+  "scripts": {
+    "start": "webpack-dev-server --config ./webpack.config.js --mode development",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andreas-becker/browsercache-leeren.de.git"
+  },
+  "keywords": [],
+  "author": "Andreas Becker <mail@andreasbecker.de> (https://andreasbecker.de)",
+  "license": "GPL",
+  "bugs": {
+    "url": "https://github.com/andreas-becker/browsercache-leeren.de/issues"
+  },
+  "homepage": "https://github.com/andreas-becker/browsercache-leeren.de#readme",
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.4.2",
+    "file-loader": "^5.0.2",
+    "html-webpack-plugin": "^3.2.0",
+    "style-loader": "^1.1.3",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.2"
+  },
+  "dependencies": {
+    "typeface-open-sans": "0.0.75"
+  }
+}
