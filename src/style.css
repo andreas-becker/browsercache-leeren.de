@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 html {
     background: #F9F9F9;
     color: #444;
@@ -5,9 +10,82 @@ html {
     font-size: 20px;
     font-weight: 300;
     height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #E9E9E9;
+    border-bottom: 1px solid #D9D9D9;
+    display: block;
+    height: 10vh;
+    line-height: 10vh;
+}
+
+main {
+    background: #FFF;
+    display: block;
+    height: 100%;
+    padding: 5vh 0;
+}
+
+footer {
+    background: #E9E9E9;
+    border-top: 1px solid #D9D9D9;
+    display: block;
+    height: 10vh;
+    line-height: 10vh;
+    text-align: right;
 }
 
 h1 {
+    display: block;
     font-size: 46px;
     font-weight: 300;
+}
+
+h2 {
+    display: block;
+    font-size: 36px;
+    font-weight: 300;
+    height: 50px;
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 960px;
+}
+
+.browser-icon {
+    padding-left: 63px;
+    position: relative;
+}
+
+.browser-icon:before {
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: '';
+    display: inline-block;
+    height: 48px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 48px;
+}
+
+.firefox .browser-icon:before {
+    background-image: url(assets/icon-firefox.svg);
+}
+
+.chrome .browser-icon:before {
+    background-image: url(assets/icon-chrome.svg);
 }

@@ -30,6 +30,7 @@
     "webpack-dev-server": "^3.10.2"
   },
   "dependencies": {
+    "bowser": "^2.9.0",
     "typeface-open-sans": "0.0.75"
   }
 }
