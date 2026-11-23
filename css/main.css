@@ -39,7 +39,7 @@ body {
     background: #f3f6f9;
     color: #1d2733;
     font-family: 'Fira Sans', 'Segoe UI', Roboto, Arial, sans-serif;
-    font-size: 17px;
+    font-size: 1.0625rem;
     font-weight: 400;
     line-height: 1.6;
 }
@@ -70,18 +70,28 @@ code {
 }
 .skip:focus { left: 8px; top: 8px; }
 
+.sr-only {
+    position: absolute;
+    width: 1px; height: 1px;
+    margin: -1px; padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
 /* ---------- Kopfbereich ---------- */
 .site-header {
-    background: #3382c0;
-    background: -webkit-linear-gradient(135deg, #2b6fa5, #3d8fd0);
-    background: linear-gradient(135deg, #2b6fa5, #3d8fd0);
+    background: #2a6ea8;
+    background: -webkit-linear-gradient(135deg, #235f91, #2c74ae);
+    background: linear-gradient(135deg, #235f91, #2c74ae);
     color: #fff;
     padding: 44px 0 40px;
 }
-.site-header h1 { font-size: 40px; font-weight: 300; letter-spacing: -.01em; }
-.site-header .lead { margin: 10px 0 0; font-size: 19px; font-weight: 300; opacity: .95; }
+.site-header h1 { font-size: 2.5rem; font-weight: 300; letter-spacing: -.01em; }
+.site-header .lead { margin: 10px 0 0; font-size: 1.1875rem; font-weight: 400; }
 .site-header--compact { padding: 22px 0; }
-.site-header .brand { margin: 0; font-size: 22px; font-weight: 300; }
+.site-header .brand { margin: 0; font-size: 1.375rem; font-weight: 300; }
 .site-header .brand a { color: #fff; text-decoration: none; }
 .site-header .brand a:hover { text-decoration: underline; }
 
@@ -111,9 +121,9 @@ main.wrap { padding-top: 28px; padding-bottom: 40px; }
 .detected .go:hover, .detected .go:focus { background: #174a73; color: #fff; }
 
 /* ---------- Browser-Auswahl ---------- */
-.picker h2 { font-size: 20px; margin-bottom: 12px; }
+.picker h2 { font-size: 1.25rem; margin-bottom: 12px; }
 .picker ul { list-style: none; margin: 0 -6px 28px; padding: 0; font-size: 0; }
-.picker li { display: inline-block; vertical-align: top; width: 33.333%; padding: 6px; font-size: 17px; }
+.picker li { display: inline-block; vertical-align: top; width: 33.333%; padding: 6px; font-size: 1.0625rem; }
 .picker a {
     display: block;
     background: #fff;
@@ -137,7 +147,7 @@ main.wrap { padding-top: 28px; padding-bottom: 40px; }
     padding: 22px 24px 12px;
     margin-bottom: 22px;
 }
-.browser h2 { font-size: 26px; margin-bottom: 14px; }
+.browser h2 { font-size: 1.625rem; margin-bottom: 14px; }
 .browser h2 .bicon { vertical-align: middle; margin-right: 14px; width: 44px; height: 44px; color: #3382c0; }
 .browser h2 .bname { vertical-align: middle; }
 .browser.is-match { border-color: #3382c0; border-left-width: 6px; }
@@ -153,35 +163,38 @@ main.wrap { padding-top: 28px; padding-bottom: 40px; }
 .variant > summary::-webkit-details-marker { display: none; }
 .variant > summary::before {
     content: '\25B8';
+    content: '\25B8' / '';
     display: inline-block;
     width: 1.1em;
     color: #3382c0;
 }
-.variant[open] > summary::before { content: '\25BE'; }
-.variant .vt { font-weight: 600; margin-right: 10px; }
-.variant .vs { color: #5b6b7a; font-size: 15px; }
+.variant[open] > summary::before { content: '\25BE'; content: '\25BE' / ''; }
+.variant .vt { font-weight: 600; margin-right: 6px; }
+.variant .vs { color: #5b6b7a; font-size: 0.9375rem; }
 .variant.legacy .vt { font-weight: 400; }
-.variant.is-match > summary .vt:after {
-    content: 'Ihr Browser';
-    margin-left: 10px;
+.match-badge {
+    display: inline-block;
+    margin-left: 6px;
     white-space: nowrap;
     background: #e3f0fa;
     color: #174a73;
-    font-size: 13px;
+    font-size: 0.8125rem;
     font-weight: 600;
+    text-transform: none;
+    letter-spacing: 0;
     border-radius: 999px;
     padding: 2px 10px;
 }
+.device-badge { text-transform: none; letter-spacing: 0; font-weight: 400; }
 .vbody { padding: 0 0 12px 1.1em; }
 
 .os-block { margin: 0 0 14px; padding: 12px 16px; border: 1px solid #e3e9ef; border-radius: 8px; background: #fafcfe; }
-.os-block h4 { font-size: 15px; text-transform: uppercase; letter-spacing: .04em; color: #5b6b7a; margin-bottom: 6px; }
+.os-block h3 { font-size: 0.9375rem; text-transform: uppercase; letter-spacing: .04em; color: #5b6b7a; margin-bottom: 6px; }
 .os-block.is-device { border-color: #3382c0; background: #f1f8fe; }
-.os-block.is-device h4 { color: #174a73; }
-.os-block.is-device h4:after { content: ' · Ihr Gerät'; text-transform: none; letter-spacing: 0; font-weight: 400; }
+.os-block.is-device h3 { color: #174a73; }
 .os-block ol { margin: 0; padding-left: 1.3em; }
 .os-block li { margin: 4px 0; }
-.vnote { color: #5b6b7a; font-size: 15px; margin: 0 0 4px; }
+.vnote { color: #5b6b7a; font-size: 0.9375rem; margin: 0 0 4px; }
 
 kbd {
     display: inline-block;
@@ -191,50 +204,50 @@ kbd {
     line-height: 1.2;
     background: #fff;
     color: #1d2733;
-    border: 1px solid #aebccb;
+    border: 1px solid #7d8fa1;
     border-bottom-width: 3px;
     border-radius: 6px;
     padding: 1px 7px;
     white-space: nowrap;
 }
 
-.unknown h2 { font-size: 22px; }
+.unknown h2 { font-size: 1.375rem; }
 
 .note {
     background: #e8eef4;
     border-radius: 8px;
     color: #3b4a58;
-    font-size: 14px;
+    font-size: 0.875rem;
     padding: 16px 20px;
 }
 .note .stand { display: block; margin-top: 6px; font-weight: 600; }
 
 /* ---------- Rechtliche Seiten ---------- */
 .legal { background: #fff; border: 1px solid #d5dde5; border-radius: 12px; margin-top: 28px; margin-bottom: 28px; padding: 28px 32px; max-width: 920px; }
-.legal h2 { font-size: 30px; margin-bottom: 18px; }
-.legal h3 { font-size: 19px; margin: 22px 0 6px; }
+.legal h1 { font-size: 1.875rem; margin-bottom: 18px; }
+.legal h2 { font-size: 1.1875rem; margin: 24px 0 6px; }
 .legal strong { font-weight: 600; }
-.legal iframe.optout { border: 0; width: 100%; height: 250px; background: #fff; border-radius: 8px; }
-.legal .dsg1-5 { font-size: 14px; }
+.legal iframe.optout { border: 0; width: 100%; height: 300px; background: #fff; border-radius: 8px; }
+.legal .dsg1-5 { font-size: 0.875rem; }
 
 /* ---------- Fußbereich ---------- */
-.site-footer { background: #e8eef4; border-top: 1px solid #d5dde5; padding: 22px 0 26px; font-size: 15px; }
+.site-footer { background: #e8eef4; border-top: 1px solid #d5dde5; padding: 22px 0 26px; font-size: 0.9375rem; }
 .site-footer p { margin: 0 0 6px; }
 .footer-links a { margin-right: 22px; }
 
 @media (max-width: 640px) {
-    body { font-size: 16px; }
+    body { font-size: 1rem; }
     .site-header { padding: 30px 0 28px; }
-    .site-header h1 { font-size: 30px; }
-    .site-header .lead { font-size: 17px; }
+    .site-header h1 { font-size: 1.875rem; }
+    .site-header .lead { font-size: 1.0625rem; }
     .picker li { width: 50%; }
     .browser { padding: 18px 16px 8px; }
-    .browser h2 { font-size: 22px; }
+    .browser h2 { font-size: 1.375rem; }
     .browser h2 .bicon { width: 36px; height: 36px; margin-right: 10px; }
     .vbody { padding-left: 0; }
     .os-block { padding: 10px 12px; }
     .legal { padding: 20px 18px; }
-    .legal h2 { font-size: 26px; }
+    .legal h1 { font-size: 1.625rem; }
 }
 
 /* ---------- Erweiterungen für moderne Browser (nach den Media Queries, damit sie gewinnen) ---------- */
@@ -259,8 +272,8 @@ kbd {
     .site-header { background: #17476e; background: -webkit-linear-gradient(135deg, #123a5a, #1d5c8f); background: linear-gradient(135deg, #123a5a, #1d5c8f); }
     .detected, .browser, .legal { background: #17212c; border-color: #2a3846; }
     .detected { border-left-color: #5aa5dc; }
-    .detected .go { background: #3382c0; }
-    .detected .go:hover, .detected .go:focus { background: #4a95d1; }
+    .detected .go { background: #2b6fa5; }
+    .detected .go:hover, .detected .go:focus { background: #235f91; }
     .picker a { background: #17212c; border-color: #2a3846; color: #e6edf3; }
     .picker a:hover, .picker a:focus { border-color: #5aa5dc; color: #b4d9f4; }
     .picker .bicon, .browser h2 .bicon { color: #6fb1e4; }
@@ -268,11 +281,11 @@ kbd {
     .variant { border-top-color: #2a3846; }
     .variant > summary::before { color: #6fb1e4; }
     .variant .vs, .vnote { color: #9aa9b8; }
-    .variant.is-match > summary .vt:after { background: #1f3a52; color: #cfe6f8; }
+    .match-badge { background: #1f3a52; color: #cfe6f8; }
     .os-block { background: #1a2632; border-color: #2a3846; }
-    .os-block h4 { color: #9aa9b8; }
+    .os-block h3 { color: #9aa9b8; }
     .os-block.is-device { background: #1b2f42; border-color: #5aa5dc; }
-    .os-block.is-device h4 { color: #cfe6f8; }
+    .os-block.is-device h3 { color: #cfe6f8; }
     kbd { background: #223040; color: #e6edf3; border-color: #4a5c6e; }
     .note { background: #1a2632; color: #b3c0cc; }
     .site-footer { background: #121b25; border-top-color: #2a3846; }

@@ -113,6 +113,15 @@
         return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
     }
 
+    function addBadge(parent, cls, text) {
+        if (!parent) { return; }
+        var s = doc.createElement('span');
+        s.className = cls;
+        s.appendChild(doc.createTextNode(text));
+        parent.appendChild(doc.createTextNode(' '));
+        parent.appendChild(s);
+    }
+
     function show(b, theOS) {
         var variant = matchVariant(b, theOS);
         if (!variant) {
@@ -135,6 +144,8 @@
         // passenden Abschnitt hervorheben, nach oben sortieren und die Variante aufklappen
         section.className += ' is-match';
         variant.className += ' is-match';
+        var vt = variant.querySelector('.vt');
+        if (vt) { addBadge(vt, 'match-badge', 'Ihr Browser'); }
         variant.setAttribute('open', 'open');
         if (container.firstChild !== section) { container.insertBefore(section, container.firstChild); }
 
@@ -144,6 +155,7 @@
         for (i = 0; i < blocks.length; i++) {
             if ((' ' + blocks[i].getAttribute('data-os') + ' ').indexOf(' ' + theOS + ' ') !== -1) {
                 blocks[i].className += ' is-device';
+                addBadge(blocks[i].querySelector('h3'), 'device-badge', '\u00B7 Ihr Gerät');
             }
         }
     }
@@ -156,8 +168,10 @@
             nav.brave.isBrave().then(function (isBrave) {
                 if (isBrave) {
                     // Hervorhebung zurücknehmen und für Brave neu setzen
-                    var old = doc.querySelectorAll('.is-match, .is-device');
+                    var badges = doc.querySelectorAll('.match-badge, .device-badge');
                     var j, cls;
+                    for (j = 0; j < badges.length; j++) { badges[j].parentNode.removeChild(badges[j]); }
+                    var old = doc.querySelectorAll('.is-match, .is-device');
                     for (j = 0; j < old.length; j++) {
                         cls = old[j].className.replace(/\s*\bis-match\b/g, '').replace(/\s*\bis-device\b/g, '');
                         old[j].className = cls;
