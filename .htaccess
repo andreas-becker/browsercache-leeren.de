@@ -1,0 +1,7 @@
+<IfModule mod_headers.c>
+	# Extra Security Headers
+	Header always append X-Frame-Options SAMEORIGIN
+	Header set X-Content-Type-Options "nosniff"
+	Header set Referrer-Policy "strict-origin-when-cross-origin"
+	Header always set Strict-Transport-Security "max-age=63072000"
+</IfModule>

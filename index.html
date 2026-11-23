@@ -1,14 +1,29 @@
 <!DOCTYPE html>
-<html class="no-js">
-
+<html lang="de" class="no-js">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>So können Sie ihren Browsercache leeren!</title>
-    <meta name="description" content="Wie Sie ihren Browsercache leeren erfahren Sie hier">
+    <title>So können Sie Ihren Browsercache leeren! – browsercache-leeren.de</title>
+    <meta name="description" content="Browsercache leeren: Anleitungen für Chrome, Edge, Firefox, Safari, Opera, Brave, Vivaldi, Samsung Internet und Internet Explorer – für Computer, Android und iPhone/iPad, nach Version.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/normalize.css">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#3382C0">
     <link rel="stylesheet" href="css/main.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Browsercache leeren",
+      "description": "So leeren Sie den Cache Ihres Browsers – mit Tastenkürzel oder über die Einstellungen.",
+      "inLanguage": "de",
+      "step": [
+        {"@type": "HowToStep", "name": "Dialog öffnen", "text": "Öffnen Sie den Dialog zum Löschen der Browserdaten, meist mit Strg + Umschalt + Entf (Mac: Cmd + Umschalt + Rücktaste) oder über die Browser-Einstellungen."},
+        {"@type": "HowToStep", "name": "Zeitraum wählen", "text": "Wählen Sie als Zeitraum „Alles“ bzw. „Gesamte Zeit“."},
+        {"@type": "HowToStep", "name": "Cache auswählen", "text": "Aktivieren Sie den Eintrag für zwischengespeicherte Bilder und Dateien (Cache)."},
+        {"@type": "HowToStep", "name": "Löschen", "text": "Bestätigen Sie mit „Löschen“ bzw. „Daten löschen“."}
+      ]
+    }
+    </script>
     <!-- Matomo -->
     <script type="text/javascript">
         var _paq = _paq || [];
@@ -31,129 +46,332 @@
     </script>
     <!-- End Matomo Code -->
 </head>
-
 <body>
-    <div class="page-container">
-        <div class="page-header">
-            <div class="page-wrapper clear">
-                <h1>Browsercache-leeren.de</h1>
-            </div>
+    <a class="skip" href="#anleitungen">Zu den Anleitungen springen</a>
+<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><symbol id="i-chrome" viewBox="0 0 48 48"><rect x="3" y="3" width="42" height="42" rx="11" ry="11" fill="none" stroke="currentColor" stroke-width="3"/><text x="24" y="31.5" text-anchor="middle" font-family="'Fira Sans', Arial, sans-serif" font-weight="600" font-size="24" fill="currentColor">C</text></symbol><symbol id="i-edge" viewBox="0 0 48 48"><rect x="3" y="3" width="42" height="42" rx="11" ry="11" fill="none" stroke="currentColor" stroke-width="3"/><text x="24" y="31.5" text-anchor="middle" font-family="'Fira Sans', Arial, sans-serif" font-weight="600" font-size="24" fill="currentColor">E</text></symbol><symbol id="i-firefox" viewBox="0 0 48 48"><rect x="3" y="3" width="42" height="42" rx="11" ry="11" fill="none" stroke="currentColor" stroke-width="3"/><text x="24" y="31.5" text-anchor="middle" font-family="'Fira Sans', Arial, sans-serif" font-weight="600" font-size="24" fill="currentColor">F</text></symbol><symbol id="i-safari" viewBox="0 0 48 48"><rect x="3" y="3" width="42" height="42" rx="11" ry="11" fill="none" stroke="currentColor" stroke-width="3"/><text x="24" y="31.5" text-anchor="middle" font-family="'Fira Sans', Arial, sans-serif" font-weight="600" font-size="24" fill="currentColor">S</text></symbol><symbol id="i-opera" viewBox="0 0 48 48"><rect x="3" y="3" width="42" height="42" rx="11" ry="11" fill="none" stroke="currentColor" stroke-width="3"/><text x="24" y="31.5" text-anchor="middle" font-family="'Fira Sans', Arial, sans-serif" font-weight="600" font-size="24" fill="currentColor">O</text></symbol><symbol id="i-brave" viewBox="0 0 48 48"><rect x="3" y="3" width="42" height="42" rx="11" ry="11" fill="none" stroke="currentColor" stroke-width="3"/><text x="24" y="31.5" text-anchor="middle" font-family="'Fira Sans', Arial, sans-serif" font-weight="600" font-size="24" fill="currentColor">B</text></symbol><symbol id="i-vivaldi" viewBox="0 0 48 48"><rect x="3" y="3" width="42" height="42" rx="11" ry="11" fill="none" stroke="currentColor" stroke-width="3"/><text x="24" y="31.5" text-anchor="middle" font-family="'Fira Sans', Arial, sans-serif" font-weight="600" font-size="24" fill="currentColor">V</text></symbol><symbol id="i-samsung" viewBox="0 0 48 48"><rect x="3" y="3" width="42" height="42" rx="11" ry="11" fill="none" stroke="currentColor" stroke-width="3"/><text x="24" y="31.5" text-anchor="middle" font-family="'Fira Sans', Arial, sans-serif" font-weight="600" font-size="19" fill="currentColor">SI</text></symbol><symbol id="i-ie" viewBox="0 0 48 48"><rect x="3" y="3" width="42" height="42" rx="11" ry="11" fill="none" stroke="currentColor" stroke-width="3"/><text x="24" y="31.5" text-anchor="middle" font-family="'Fira Sans', Arial, sans-serif" font-weight="600" font-size="19" fill="currentColor">IE</text></symbol></defs></svg>
+    <header class="site-header">
+        <div class="wrap">
+            <h1>Browsercache leeren</h1>
+            <p class="lead">Schritt-für-Schritt-Anleitungen für alle gängigen Browser, Versionen und Geräte.</p>
         </div>
-        <div class="page-content">
-            <div class="page-wrapper clear">
-                <div class="content-box content-box-chrome">
-                    <h2 class="browser-icon"><span class="chrome">&nbsp;</span>Google Chrome</h2>
-                    <ol>
-                        <li>Drücken Sie die Tasten <span class="keys key-strg">Strg</span><span class="keys key-cmd">&#8984; Cmd</span> + <span class="keys key-shift">&#8679; Shift</span> + <span class="keys key-entf">Entf</span><span class="keys key-backspace">←</span></li>
-                        <li>Wählen Sie bei "Zeitraum" den Eintrag "Gesamte Zeit"</li>
-                        <!--<li>Aktivieren Sie "Cache löschen" und klicken Sie dann auf "Browserdaten löschen"</li>-->
-                        <li>Aktivieren Sie "Bilder und Dateien im Cache" und klicken Sie dann auf "Daten löschen"</li>
-                        <li class="macos">Alternativ lässt sich der Browsercache mit dem Programm <a href="https:///macpaw.audw.net/c/1220124/512845/1733" target="_blank">CleanMyMac X*</a> löschen.</li>
-                    </ol>
-                    <ol class="android ipad iphone">
-                        <li>Klicken Sie auf den Menü-Knopf in der Titelleiste des Browserfenster</li>
-                        <li>Wählen Sie den Eintrag "Einstellungen"</li>
-                        <li>Im neuen Fenster wählen Sie den Eintrag "Datenschutz"</li>
-                        <li>Klicken Sie auf den Button "Browserdaten löschen"</li>
-                        <li>Es öffnet sich ein neues Fenster. Aktivieren Sie die Option "Cache leeren" und klicken Sie dann auf "Löschen"</li>
-                    </ol>
-                </div>
-                <div class="content-box content-box-firefox">
-                    <h2 class="browser-icon"><span class="firefox">&nbsp;</span>Mozilla Firefox</h2>
-                    <ol>
-                        <li>Drücken Sie die Tasten <span class="keys key-strg">Strg</span><span class="keys key-cmd">&#8984; Cmd</span> + <span class="keys key-shift">&#8679; Shift</span> + <span class="keys key-entf">Entf</span><span class="keys key-backspace">←</span></li>
-                        <li>Wählen Sie in der Auswahlbox den Eintrag "Alles"</li>
-                        <li>Aktivieren Sie die Option "Cache" und klicken Sie dann auf "Ok"</li>
-                        <li class="macos">Alternativ lässt sich der Browsercache mit dem Programm <a href="https://macpaw.audw.net/c/1220124/512845/1733" target="_blank">CleanMyMac X*</a> löschen.</li>
-                    </ol>
-                </div>
-                <div class="content-box content-box-msie">
-                    <h2 class="browser-icon"><span class="msie">&nbsp;</span>Microsoft Internet Explorer</h2>
-                    <ol>
-                        <li>Drücken Sie die Tasten <span class="keys key-strg">Strg</span><span class="keys key-cmd">&#8984; Cmd</span> + <span class="keys key-shift">&#8679; Shift</span> + <span class="keys key-entf">Entf</span></li>
-                        <li>Wählen Sie "Temporäre Internetdateien" und klicken Sie dann auf "Löschen"</li>
-                        <li class="macos">Alternativ lässt sich der Browsercache mit dem Programm <a href="https://macpaw.audw.net/c/1220124/512845/1733" target="_blank">CleanMyMac X*</a> löschen.</li>
-                    </ol>
-                </div>
-                <div class="content-box content-box-opera-1">
-                    <h2 class="browser-icon"><span class="opera">&nbsp;</span>Opera</h2>
-                    <ol>
-                        <li>Klicken auf den Opera- bzw. Menü-Knopf in der Titelleiste des Browserfenster</li>
-                        <li>Klicken Sie im Menü "Einstellungen" auf "Internetspuren löschen..."</li>
-                        <li>Aktivieren Sie die Option "Den kompletten Cache löschen"</li>
-                        <li>Klicken Sie unten im Fenster auf den Button "Löschen"</li>
-                    </ol>
-                </div>
-                <div class="content-box content-box-opera-2">
-                    <h2 class="browser-icon"><span class="opera">&nbsp;</span>Opera</h2>
-                    <ol>
-                        <li>Drücken Sie die Tasten <span class="keys key-strg">Strg</span> + <span class="keys key-shift">&#8679; Shift</span> + <span class="keys key-entf">Entf</span></li>
-                        <li>Klicken Sie anschließend auf "Browserdaten löschen"</li>
-                    </ol>
-                </div>
-                <div class="content-box content-box-safari">
-                    <h2 class="browser-icon"><span class="safari">&nbsp;</span>Safari</h2>
-                    <ol>
-                        <li>Drücken Sie die Tasten <span class="keys key-strg">Strg</span><span class="keys key-cmd">&#8984; Cmd</span> + <span class="keys key-alt">Alt</span> + <span class="keys key-e">E</span></li>
-                        <li>Klicken Sie anschließend auf "Leeren"</li>
-                        <li class="macos">Alternativ lässt sich der Browsercache mit dem Programm <a href="https://macpaw.audw.net/c/1220124/512845/1733" target="_blank">CleanMyMac X*</a> löschen.</li>
-                    </ol>
-                    <ol class="ipad iphone">
-                        <li>Öffnen Sie die "Einstellungen" Ihres iOS-Geräts</li>
-                        <li>Wählen Sie den Eintrag "Safari" und dann "Erweitert"</li>
-                        <li>Anschließend den Eintrag "Website-Daten"</li>
-                        <li>Klicken Sie den Button "Alle Website Daten entfernen" und bestätigen Sie die Abfrage mit "Entfernen"</li>
-                    </ol>
-                </div>
-                <div class="content-box content-box-webkit">
-                    <h2 class="browser-icon"><span class="webkit">&nbsp;</span>Webkit</h2>
-                    <ol>
-                        <li>Drücken Sie die Tasten <span class="keys key-strg">Strg</span><span class="keys key-cmd">&#8984; Cmd</span> + <span class="keys key-shift">&#8679; Shift</span> + <span class="keys key-entf">Entf</span></li>
-                        <li>Es öffnet sich ein neues Fenster. Aktivieren Sie die Option "Cache" und klicken Sie dann auf "Jetzt löschen"</li>
-                    </ol>
-                    <ol class="android">
-                        <li>Klicken Sie auf den Menü-Knopf in der Titelleiste des Browserfenster</li>
-                        <li>Wählen Sie den Eintrag "Einstellungen"</li>
-                        <li>Im neuen Fenster wählen Sie den Eintrag "Datenschutz & Sicherheit"</li>
-                        <li>Klicken Sie auf den Eintrag "Cache leeren" und bestätigen Sie die Abfrage mit OK</li>
-                    </ol>
-                </div>
-                <div class="content-box content-box-none">
-                    <h2 class="browser-icon"><span class="none">&nbsp;</span>Unbekannt</h2>
-                    <p>Leider wurde Ihr Browser nicht automatisch erkannt ;-(.<br /> Ich würde mich sehr freuen wenn Sie mir Ihren Browser/ihre Browserversion <a href="http://blog.andreasbecker.de/impressum/" title="Meine Kontaktadresse finden Sie hier"
-                            style="text-decoration:underline;">mitteilen</a> würden. Durch Ihre Mithilfe profitieren auch alle weiteren Besucher!</p>
-                </div>
-                <div class="note">Die bereitgestellten Informationen auf dieser Website wurden sorgfältig geprüft und werden unregelmäßig aktualisiert. Jedoch kann keine Haftung oder Garantie dafür übernommen werden, dass alle Angaben zu jeder Zeit vollständig, richtig
-                    und in letzter Aktualität dargestellt sind.<br /> Alle Angaben können ohne vorherige Ankündigung geändert, entfernt oder ergänzt werden.<br /> *Affiliate-/Werbelink
-                </div>
-            </div>
+    </header>
+    <main class="wrap">
+        <div id="detected" class="detected" role="status" aria-live="polite" hidden="hidden"></div>
+
+        <nav class="picker" aria-labelledby="picker-title">
+            <h2 id="picker-title">Browser auswählen</h2>
+            <ul><li><a href="#chrome"><svg class="bicon" viewBox="0 0 48 48" width="44" height="44" aria-hidden="true" focusable="false"><use xlink:href="#i-chrome" href="#i-chrome"></use></svg><span>Google Chrome</span></a></li><li><a href="#edge"><svg class="bicon" viewBox="0 0 48 48" width="44" height="44" aria-hidden="true" focusable="false"><use xlink:href="#i-edge" href="#i-edge"></use></svg><span>Microsoft Edge</span></a></li><li><a href="#firefox"><svg class="bicon" viewBox="0 0 48 48" width="44" height="44" aria-hidden="true" focusable="false"><use xlink:href="#i-firefox" href="#i-firefox"></use></svg><span>Mozilla Firefox</span></a></li><li><a href="#safari"><svg class="bicon" viewBox="0 0 48 48" width="44" height="44" aria-hidden="true" focusable="false"><use xlink:href="#i-safari" href="#i-safari"></use></svg><span>Safari</span></a></li><li><a href="#opera"><svg class="bicon" viewBox="0 0 48 48" width="44" height="44" aria-hidden="true" focusable="false"><use xlink:href="#i-opera" href="#i-opera"></use></svg><span>Opera</span></a></li><li><a href="#brave"><svg class="bicon" viewBox="0 0 48 48" width="44" height="44" aria-hidden="true" focusable="false"><use xlink:href="#i-brave" href="#i-brave"></use></svg><span>Brave</span></a></li><li><a href="#vivaldi"><svg class="bicon" viewBox="0 0 48 48" width="44" height="44" aria-hidden="true" focusable="false"><use xlink:href="#i-vivaldi" href="#i-vivaldi"></use></svg><span>Vivaldi</span></a></li><li><a href="#samsung"><svg class="bicon" viewBox="0 0 48 48" width="44" height="44" aria-hidden="true" focusable="false"><use xlink:href="#i-samsung" href="#i-samsung"></use></svg><span>Samsung Internet</span></a></li><li><a href="#ie"><svg class="bicon" viewBox="0 0 48 48" width="44" height="44" aria-hidden="true" focusable="false"><use xlink:href="#i-ie" href="#i-ie"></use></svg><span>Internet Explorer</span></a></li></ul>
+        </nav>
+
+        <div id="anleitungen" class="browsers">
+<section class="browser" id="chrome" data-browser="chrome">
+<h2><svg class="bicon" viewBox="0 0 48 48" width="44" height="44" aria-hidden="true" focusable="false"><use xlink:href="#i-chrome" href="#i-chrome"></use></svg><span class="bname">Google Chrome</span></h2>
+<details class="variant" id="chrome-aktuell" data-browser="chrome" data-min="40" data-max="9999" data-os="win mac linux android ios" open="open">
+<summary><span class="vt">Aktuelle Versionen</span><span class="vs">Chrome ab Version 40</span></summary>
+<div class="vbody">
+<div class="os-block" data-os="win linux"><h4>Windows / Linux</h4><ol>
+<li>Drücken Sie die Tasten <kbd>Strg</kbd> + <kbd>Umschalt</kbd> + <kbd>Entf</kbd> (oder: Dreipunkt-Menü › Weitere Tools › „Browserdaten löschen“).</li>
+<li>Wählen Sie bei „Zeitraum“ den Eintrag „Gesamte Zeit“.</li>
+<li>Aktivieren Sie „Bilder und Dateien im Cache“. Die übrigen Häkchen können Sie entfernen.</li>
+<li>Klicken Sie auf „Daten löschen“.</li>
+</ol></div>
+<div class="os-block" data-os="mac"><h4>macOS</h4><ol>
+<li>Drücken Sie die Tasten <kbd>⌘ Cmd</kbd> + <kbd>⇧ Umschalt</kbd> + <kbd>⌫ Rücktaste</kbd>.</li>
+<li>Wählen Sie bei „Zeitraum“ den Eintrag „Gesamte Zeit“.</li>
+<li>Aktivieren Sie „Bilder und Dateien im Cache“.</li>
+<li>Klicken Sie auf „Daten löschen“.</li>
+</ol></div>
+<div class="os-block" data-os="android"><h4>Android</h4><ol>
+<li>Öffnen Sie Chrome und tippen Sie rechts neben der Adressleiste auf das Dreipunkt-Menü.</li>
+<li>Tippen Sie auf „Browserdaten löschen“ und, falls nötig, auf „Weitere Optionen“.</li>
+<li>Wählen Sie als Zeitraum „Gesamte Zeit“ und aktivieren Sie „Bilder und Dateien im Cache“.</li>
+<li>Tippen Sie auf „Daten löschen“.</li>
+</ol></div>
+<div class="os-block" data-os="ios"><h4>iPhone / iPad (iOS)</h4><ol>
+<li>Öffnen Sie Chrome und tippen Sie auf das Dreipunkt-Menü.</li>
+<li>Tippen Sie auf „Browserdaten löschen“.</li>
+<li>Wählen Sie einen Zeitraum und aktivieren Sie „Im Cache gespeicherte Bilder und Dateien“.</li>
+<li>Bestätigen Sie mit „Browserdaten löschen“.</li>
+</ol></div>
+</div></details>
+<details class="variant legacy" id="chrome-alt" data-browser="chrome" data-min="0" data-max="39" data-os="win mac linux android ios">
+<summary><span class="vt">Ältere Versionen</span><span class="vs">Chrome bis Version 39 (ca.)</span></summary>
+<div class="vbody">
+<div class="os-block" data-os="win linux"><h4>Windows / Linux</h4><ol>
+<li>Drücken Sie die Tasten <kbd>Strg</kbd> + <kbd>Umschalt</kbd> + <kbd>Entf</kbd>.</li>
+<li>Wählen Sie bei „Zeitraum“ den Eintrag „Alles“ bzw. „Gesamte Zeit“.</li>
+<li>Aktivieren Sie „Cache löschen“ und klicken Sie dann auf „Browserdaten löschen“.</li>
+</ol></div>
+<div class="os-block" data-os="mac"><h4>macOS</h4><ol>
+<li>Drücken Sie die Tasten <kbd>⌘ Cmd</kbd> + <kbd>⇧ Umschalt</kbd> + <kbd>⌫ Rücktaste</kbd>.</li>
+<li>Wählen Sie bei „Zeitraum“ den Eintrag „Alles“ bzw. „Gesamte Zeit“.</li>
+<li>Aktivieren Sie „Cache löschen“ und klicken Sie dann auf „Browserdaten löschen“.</li>
+</ol></div>
+<div class="os-block" data-os="android"><h4>Android</h4><ol>
+<li>Tippen Sie auf den Menü-Knopf des Browsers und wählen Sie „Einstellungen“.</li>
+<li>Wählen Sie „Datenschutz“ und dann „Browserdaten löschen“.</li>
+<li>Aktivieren Sie „Cache leeren“ und tippen Sie auf „Löschen“.</li>
+</ol></div>
+</div></details>
+</section>
+<section class="browser" id="edge" data-browser="edge">
+<h2><svg class="bicon" viewBox="0 0 48 48" width="44" height="44" aria-hidden="true" focusable="false"><use xlink:href="#i-edge" href="#i-edge"></use></svg><span class="bname">Microsoft Edge</span></h2>
+<details class="variant" id="edge-chromium" data-browser="edge" data-min="79" data-max="9999" data-os="win mac linux" open="open">
+<summary><span class="vt">Aktuelle Versionen (Computer)</span><span class="vs">Edge ab Version 79 (Chromium)</span></summary>
+<div class="vbody">
+<div class="os-block" data-os="win linux"><h4>Windows / Linux</h4><ol>
+<li>Drücken Sie die Tasten <kbd>Strg</kbd> + <kbd>Umschalt</kbd> + <kbd>Entf</kbd>.</li>
+<li>Wählen Sie bei „Zeitbereich“ den Eintrag „Alle Zeit“.</li>
+<li>Aktivieren Sie „Zwischengespeicherte Bilder und Dateien“ und klicken Sie auf „Jetzt löschen“.</li>
+<li>Ohne Tastenkürzel: Menü „Einstellungen und mehr“ (…) › Einstellungen › Datenschutz, Suche und Dienste › Browserdaten löschen › „Zu löschende Elemente auswählen“.</li>
+</ol></div>
+<div class="os-block" data-os="mac"><h4>macOS</h4><ol>
+<li>Drücken Sie die Tasten <kbd>⌘ Cmd</kbd> + <kbd>⇧ Umschalt</kbd> + <kbd>⌫ Rücktaste</kbd>.</li>
+<li>Wählen Sie bei „Zeitbereich“ den Eintrag „Alle Zeit“.</li>
+<li>Aktivieren Sie „Zwischengespeicherte Bilder und Dateien“ und klicken Sie auf „Jetzt löschen“.</li>
+<li>Ohne Tastenkürzel: Menü „Einstellungen und mehr“ (…) › Einstellungen › Datenschutz, Suche und Dienste › Browserdaten löschen › „Zu löschende Elemente auswählen“.</li>
+</ol></div>
+</div></details>
+<details class="variant" id="edge-mobil" data-browser="edge" data-min="0" data-max="9999" data-os="android ios">
+<summary><span class="vt">Edge-App</span><span class="vs">Android und iPhone / iPad</span></summary>
+<div class="vbody">
+<div class="os-block" data-os="android ios"><h4>Android / iOS</h4><ol>
+<li>Tippen Sie auf das Menü (…).</li>
+<li>Wählen Sie Einstellungen › Datenschutz und Sicherheit › „Browserdaten löschen“. Je nach App-Version heißt der Eintrag „Datenschutz“ oder „Privatsphäre“.</li>
+<li>Wählen Sie die Datentypen aus, die Sie löschen möchten, darunter den Cache (zwischengespeicherte Bilder und Dateien).</li>
+<li>Tippen Sie auf „Löschen“.</li>
+</ol></div>
+</div></details>
+<details class="variant legacy" id="edge-legacy" data-browser="edge" data-min="12" data-max="18" data-os="win">
+<summary><span class="vt">Edge Legacy</span><span class="vs">Edge Version 12 bis 18 (EdgeHTML, Windows 10)</span></summary>
+<div class="vbody">
+<div class="os-block" data-os="win"><h4>Windows 10</h4><ol>
+<li>Drücken Sie die Tasten <kbd>Strg</kbd> + <kbd>Umschalt</kbd> + <kbd>Entf</kbd> – oder öffnen Sie das Menü (…) › Einstellungen › „Zu löschende Elemente auswählen“.</li>
+<li>Aktivieren Sie „Zwischengespeicherte Daten und Dateien“.</li>
+<li>Klicken Sie auf „Löschen“.</li>
+</ol></div>
+</div></details>
+</section>
+<section class="browser" id="firefox" data-browser="firefox">
+<h2><svg class="bicon" viewBox="0 0 48 48" width="44" height="44" aria-hidden="true" focusable="false"><use xlink:href="#i-firefox" href="#i-firefox"></use></svg><span class="bname">Mozilla Firefox</span></h2>
+<details class="variant" id="firefox-aktuell" data-browser="firefox" data-min="57" data-max="9999" data-os="win mac linux android ios" open="open">
+<summary><span class="vt">Aktuelle Versionen</span><span class="vs">Firefox ab Version 57</span></summary>
+<div class="vbody">
+<div class="os-block" data-os="win linux"><h4>Windows / Linux</h4><ol>
+<li>Drücken Sie die Tasten <kbd>Strg</kbd> + <kbd>Umschalt</kbd> + <kbd>Entf</kbd>. Es öffnet sich „Neueste Chronik löschen“.</li>
+<li>Wählen Sie neben „Zeitraum“ den Eintrag „Alles“.</li>
+<li>Aktivieren Sie die Option „Cache“ und klicken Sie auf „OK“ bzw. „Jetzt löschen“.</li>
+<li>Ohne Tastenkürzel: Menü (☰) › Einstellungen › Datenschutz &amp; Sicherheit › Cookies und Website-Daten › „Daten entfernen…“ (neuere Versionen: „Surf-Daten löschen“) › „Temporäre Dateien und Seiten im Cache“ › „Löschen“.</li>
+</ol></div>
+<div class="os-block" data-os="mac"><h4>macOS</h4><ol>
+<li>Drücken Sie die Tasten <kbd>⌘ Cmd</kbd> + <kbd>⇧ Umschalt</kbd> + <kbd>⌫ Rücktaste</kbd>. Es öffnet sich „Neueste Chronik löschen“.</li>
+<li>Wählen Sie neben „Zeitraum“ den Eintrag „Alles“.</li>
+<li>Aktivieren Sie die Option „Cache“ und klicken Sie auf „OK“ bzw. „Jetzt löschen“.</li>
+<li>Ohne Tastenkürzel: Firefox-Menü in der Menüleiste › Einstellungen › Datenschutz &amp; Sicherheit › Cookies und Website-Daten › „Daten entfernen…“.</li>
+</ol></div>
+<div class="os-block" data-os="android"><h4>Android</h4><ol>
+<li>Tippen Sie auf das Dreipunkt-Menü und wählen Sie „Einstellungen“.</li>
+<li>Tippen Sie im Bereich „Datenschutz und Sicherheit“ auf „Browserdaten löschen“.</li>
+<li>Aktivieren Sie „Zwischengespeicherte Bilder und Dateien“.</li>
+<li>Tippen Sie unten auf „Browserdaten löschen“ und bestätigen Sie mit „Löschen“.</li>
+</ol></div>
+<div class="os-block" data-os="ios"><h4>iPhone / iPad (iOS)</h4><ol>
+<li>Öffnen Sie das Menü und wählen Sie „Einstellungen“.</li>
+<li>Tippen Sie unter „Datenschutz“ auf „Datenverwaltung“.</li>
+<li>Aktivieren Sie „Cache“ und tippen Sie am Ende der Liste auf „Private Daten löschen“.</li>
+</ol></div>
+</div></details>
+<details class="variant legacy" id="firefox-alt" data-browser="firefox" data-min="0" data-max="56" data-os="win mac linux android ios">
+<summary><span class="vt">Ältere Versionen</span><span class="vs">Firefox bis Version 56</span></summary>
+<div class="vbody">
+<div class="os-block" data-os="win mac linux"><h4>Windows / Linux / macOS</h4><ol>
+<li>Drücken Sie die Tasten <kbd>Strg</kbd> + <kbd>Umschalt</kbd> + <kbd>Entf</kbd> (macOS: <kbd>⌘ Cmd</kbd> + <kbd>⇧ Umschalt</kbd> + <kbd>⌫ Rücktaste</kbd>), wählen Sie „Alles“ und aktivieren Sie „Cache“.</li>
+<li>Ohne Tastenkürzel: Menü (☰) › Einstellungen › Erweitert › Netzwerk › „Zwischengespeicherte Webinhalte“ › „Jetzt leeren“.</li>
+</ol></div>
+<div class="os-block" data-os="android"><h4>Android (ältere App)</h4><ol>
+<li>Tippen Sie auf das Menü-Symbol und dann auf „Einstellungen“.</li>
+<li>Wählen Sie unter „Datenschutz &amp; Sicherheit“ den Eintrag „Private Daten löschen“.</li>
+<li>Aktivieren Sie „Cache“ und tippen Sie auf „Daten löschen“.</li>
+</ol></div>
+</div></details>
+</section>
+<section class="browser" id="safari" data-browser="safari">
+<h2><svg class="bicon" viewBox="0 0 48 48" width="44" height="44" aria-hidden="true" focusable="false"><use xlink:href="#i-safari" href="#i-safari"></use></svg><span class="bname">Safari</span></h2>
+<details class="variant" id="safari-mac" data-browser="safari" data-min="6" data-max="9999" data-os="mac" open="open">
+<summary><span class="vt">Mac</span><span class="vs">Safari 6 und neuer (macOS)</span></summary>
+<div class="vbody">
+<div class="os-block" data-os="mac"><h4>macOS</h4><ol>
+<li>Blenden Sie einmalig das Entwickler-Menü ein: Safari › Einstellungen › Erweitert › „Menü ‚Entwickler‘ in der Menüleiste anzeigen“.</li>
+<li>Wählen Sie in der Menüleiste „Entwickler“ › „Cache-Speicher leeren“ – oder drücken Sie <kbd>⌘ Cmd</kbd> + <kbd>⌥ Alt</kbd> + <kbd>E</kbd>.</li>
+<li>Alternativ (löscht auch Cookies): Safari › Einstellungen › Datenschutz › „Websitedaten verwalten…“ › „Alle entfernen“.</li>
+</ol></div>
+</div></details>
+<details class="variant" id="safari-ios18" data-browser="safari" data-min="18" data-max="9999" data-os="ios" open="open">
+<summary><span class="vt">iPhone / iPad</span><span class="vs">iOS 18 und neuer</span></summary>
+<div class="vbody">
+<div class="os-block" data-os="ios"><h4>iOS / iPadOS</h4><ol>
+<li>Öffnen Sie die „Einstellungen“ Ihres Geräts und tippen Sie auf „Apps“ › „Safari“.</li>
+<li>Scrollen Sie nach unten und tippen Sie auf „Verlauf und Websitedaten löschen“. Bestätigen Sie den Zeitraum mit „Verlauf löschen“.</li>
+<li>Nur Websitedaten ohne Verlauf: Safari › „Erweitert“ › „Websitedaten“ › „Alle Websitedaten entfernen“.</li>
+</ol></div>
+</div></details>
+<details class="variant legacy" id="safari-ios-alt" data-browser="safari" data-min="0" data-max="17" data-os="ios">
+<summary><span class="vt">iPhone / iPad (älter)</span><span class="vs">iOS 17 und älter</span></summary>
+<div class="vbody">
+<div class="os-block" data-os="ios"><h4>iOS / iPadOS</h4><ol>
+<li>Öffnen Sie die „Einstellungen“ Ihres Geräts und wählen Sie „Safari“.</li>
+<li>Tippen Sie auf „Verlauf und Websitedaten löschen“ und bestätigen Sie.</li>
+<li>Nur Websitedaten: „Erweitert“ › „Websitedaten“ › „Alle Websitedaten entfernen“ und mit „Entfernen“ bestätigen.</li>
+</ol></div>
+</div></details>
+<details class="variant legacy" id="safari-alt" data-browser="safari" data-min="0" data-max="5" data-os="mac win">
+<summary><span class="vt">Ältere Versionen</span><span class="vs">Safari 5 und älter (Mac und Windows)</span></summary>
+<div class="vbody">
+<div class="os-block" data-os="mac"><h4>macOS</h4><ol>
+<li>Öffnen Sie das Menü „Safari“ und wählen Sie „Cache leeren…“.</li>
+<li>Klicken Sie anschließend auf „Leeren“.</li>
+</ol></div>
+<div class="os-block" data-os="win"><h4>Windows</h4><ol>
+<li>Drücken Sie die Tasten <kbd>Strg</kbd> + <kbd>Alt</kbd> + <kbd>E</kbd>.</li>
+<li>Klicken Sie anschließend auf „Leeren“.</li>
+</ol></div>
+</div></details>
+</section>
+<section class="browser" id="opera" data-browser="opera">
+<h2><svg class="bicon" viewBox="0 0 48 48" width="44" height="44" aria-hidden="true" focusable="false"><use xlink:href="#i-opera" href="#i-opera"></use></svg><span class="bname">Opera</span></h2>
+<details class="variant" id="opera-neu" data-browser="opera" data-min="36" data-max="9999" data-os="win mac linux" open="open">
+<summary><span class="vt">Aktuelle Versionen</span><span class="vs">Opera ab Version 36</span></summary>
+<div class="vbody">
+<div class="os-block" data-os="win linux mac"><h4>Windows / Linux / macOS</h4><ol>
+<li>Drücken Sie die Tasten <kbd>Strg</kbd> + <kbd>Umschalt</kbd> + <kbd>Entf</kbd> (oder: Opera-Menü › Einstellungen › Datenschutz &amp; Sicherheit › „Browserdaten löschen…“).</li>
+<li>Wählen Sie als Zeitraum „Gesamte Zeit“ bzw. „Beginn der Zeit“.</li>
+<li>Aktivieren Sie „Zwischengespeicherte Bilder und Dateien“ und klicken Sie auf „Browserdaten löschen“.</li>
+</ol></div>
+</div></details>
+<details class="variant legacy" id="opera-mittel" data-browser="opera" data-min="15" data-max="35" data-os="win mac linux">
+<summary><span class="vt">Frühere Chromium-Versionen</span><span class="vs">Opera 15 bis 35</span></summary>
+<div class="vbody">
+<div class="os-block" data-os="win mac linux"><h4>Windows / Linux / macOS</h4><ol>
+<li>Klicken Sie auf den Opera- bzw. Menü-Knopf in der Titelleiste des Browserfensters.</li>
+<li>Klicken Sie im Menü „Einstellungen“ auf „Internetspuren löschen…“.</li>
+<li>Aktivieren Sie die Option „Den kompletten Cache löschen“.</li>
+<li>Klicken Sie unten im Fenster auf „Löschen“.</li>
+</ol></div>
+</div></details>
+<details class="variant legacy" id="opera-alt" data-browser="opera" data-min="0" data-max="14" data-os="win mac linux">
+<summary><span class="vt">Ältere Versionen</span><span class="vs">Opera bis Version 12 (Presto)</span></summary>
+<div class="vbody">
+<div class="os-block" data-os="win linux"><h4>Windows</h4><ol>
+<li>Opera 11 und 12: Opera-Menü › Einstellungen › „Private Daten löschen…“ (Tastenkürzel <kbd>Strg</kbd> + <kbd>Umschalt</kbd> + <kbd>Entf</kbd>).</li>
+<li>Opera 9 und 10: Menü „Extras“ › „Private Daten löschen…“.</li>
+<li>Klicken Sie auf „Detaillierte Optionen“, aktivieren Sie „Gesamten Cache löschen“ und klicken Sie auf „Löschen“.</li>
+</ol></div>
+</div></details>
+</section>
+<section class="browser" id="brave" data-browser="brave">
+<h2><svg class="bicon" viewBox="0 0 48 48" width="44" height="44" aria-hidden="true" focusable="false"><use xlink:href="#i-brave" href="#i-brave"></use></svg><span class="bname">Brave</span></h2>
+<details class="variant" id="brave-aktuell" data-browser="brave" data-min="0" data-max="9999" data-os="win mac linux android" open="open">
+<summary><span class="vt">Aktuelle Versionen</span><span class="vs">Brave für Computer und Android</span></summary>
+<div class="vbody">
+<div class="os-block" data-os="win linux"><h4>Windows / Linux</h4><ol>
+<li>Drücken Sie die Tasten <kbd>Strg</kbd> + <kbd>Umschalt</kbd> + <kbd>Entf</kbd> – oder geben Sie <code>brave://settings/clearBrowserData</code> in die Adressleiste ein.</li>
+<li>Ohne Tastenkürzel: Menü (☰) › Einstellungen › Zusätzliche Einstellungen › Datenschutz und Sicherheit › „Browserdaten löschen“.</li>
+<li>Wählen Sie einen Zeitraum (z. B. „Gesamte Zeit“) und aktivieren Sie „Zwischengespeicherte Bilder und Dateien“.</li>
+<li>Klicken Sie auf „Daten löschen“.</li>
+</ol></div>
+<div class="os-block" data-os="mac"><h4>macOS</h4><ol>
+<li>Drücken Sie die Tasten <kbd>⌘ Cmd</kbd> + <kbd>⇧ Umschalt</kbd> + <kbd>⌫ Rücktaste</kbd> – oder geben Sie <code>brave://settings/clearBrowserData</code> in die Adressleiste ein.</li>
+<li>Wählen Sie einen Zeitraum (z. B. „Gesamte Zeit“) und aktivieren Sie „Zwischengespeicherte Bilder und Dateien“.</li>
+<li>Klicken Sie auf „Daten löschen“.</li>
+</ol></div>
+<div class="os-block" data-os="android"><h4>Android</h4><ol>
+<li>Öffnen Sie in Brave die Einstellungen.</li>
+<li>Wählen Sie „Brave-Shields und Datenschutz“ › „Browserdaten löschen“.</li>
+<li>Wählen Sie die Datentypen (darunter den Cache) und tippen Sie auf „Browserdaten löschen“.</li>
+</ol></div>
+</div></details>
+</section>
+<section class="browser" id="vivaldi" data-browser="vivaldi">
+<h2><svg class="bicon" viewBox="0 0 48 48" width="44" height="44" aria-hidden="true" focusable="false"><use xlink:href="#i-vivaldi" href="#i-vivaldi"></use></svg><span class="bname">Vivaldi</span></h2>
+<details class="variant" id="vivaldi-aktuell" data-browser="vivaldi" data-min="0" data-max="9999" data-os="win mac linux" open="open">
+<summary><span class="vt">Aktuelle Versionen</span><span class="vs">Vivaldi für Computer</span></summary>
+<div class="vbody">
+<div class="os-block" data-os="win linux"><h4>Windows / Linux</h4><ol>
+<li>Drücken Sie die Tasten <kbd>Strg</kbd> + <kbd>Umschalt</kbd> + <kbd>Entf</kbd> – oder öffnen Sie das Vivaldi-Menü › Werkzeuge › „Browserdaten löschen…“.</li>
+<li>Wählen Sie den Zeitraum „Alles“.</li>
+<li>Aktivieren Sie „Cache“ (und „Anwendungs-Cache“) und klicken Sie auf „Löschen“.</li>
+</ol></div>
+<div class="os-block" data-os="mac"><h4>macOS</h4><ol>
+<li>Drücken Sie die Tasten <kbd>⌘ Cmd</kbd> + <kbd>⇧ Umschalt</kbd> + <kbd>⌫ Rücktaste</kbd> – oder wählen Sie im Menü „Werkzeuge“ den Eintrag „Browserdaten löschen…“.</li>
+<li>Wählen Sie den Zeitraum „Alles“.</li>
+<li>Aktivieren Sie „Cache“ (und „Anwendungs-Cache“) und klicken Sie auf „Löschen“.</li>
+</ol></div>
+</div></details>
+</section>
+<section class="browser" id="samsung" data-browser="samsung">
+<h2><svg class="bicon" viewBox="0 0 48 48" width="44" height="44" aria-hidden="true" focusable="false"><use xlink:href="#i-samsung" href="#i-samsung"></use></svg><span class="bname">Samsung Internet</span></h2>
+<details class="variant" id="samsung-aktuell" data-browser="samsung" data-min="0" data-max="9999" data-os="android" open="open">
+<summary><span class="vt">Samsung Internet</span><span class="vs">Android (Galaxy-Geräte)</span></summary>
+<div class="vbody">
+<div class="os-block" data-os="android"><h4>Android</h4><ol>
+<li>Öffnen Sie Samsung Internet und tippen Sie unten rechts auf das Menü-Symbol (☰).</li>
+<li>Tippen Sie auf „Einstellungen“ › „Persönliche Browserdaten“ (je nach Version „Persönliche Daten“) › „Browserdaten löschen“.</li>
+<li>Aktivieren Sie „Cache“ bzw. „Zwischengespeicherte Bilder und Dateien“.</li>
+<li>Tippen Sie auf „Löschen“ bzw. „Daten löschen“ und bestätigen Sie.</li>
+</ol></div>
+<p class="vnote">Bei älteren Versionen finden Sie die Funktion unter Einstellungen › Datenschutz und Sicherheit › „Browserdaten löschen“.</p>
+</div></details>
+</section>
+<section class="browser" id="ie" data-browser="ie">
+<h2><svg class="bicon" viewBox="0 0 48 48" width="44" height="44" aria-hidden="true" focusable="false"><use xlink:href="#i-ie" href="#i-ie"></use></svg><span class="bname">Internet Explorer</span></h2>
+<details class="variant" id="ie-9-11" data-browser="ie" data-min="9" data-max="11" data-os="win" open="open">
+<summary><span class="vt">Internet Explorer 9 bis 11</span><span class="vs">Windows</span></summary>
+<div class="vbody">
+<div class="os-block" data-os="win"><h4>Windows</h4><ol>
+<li>Drücken Sie die Tasten <kbd>Strg</kbd> + <kbd>Umschalt</kbd> + <kbd>Entf</kbd> – oder klicken Sie auf das Zahnrad › Sicherheit › „Browserverlauf löschen…“.</li>
+<li>Entfernen Sie das Häkchen bei „Daten der bevorzugten Websites beibehalten“ und aktivieren Sie „Temporäre Internetdateien und Websitedateien“.</li>
+<li>Klicken Sie auf „Löschen“.</li>
+</ol></div>
+<p class="vnote">Microsoft empfiehlt statt Internet Explorer den Browser Edge (bei Bedarf mit „Internet Explorer-Modus“).</p>
+</div></details>
+<details class="variant legacy" id="ie-7-8" data-browser="ie" data-min="7" data-max="8" data-os="win">
+<summary><span class="vt">Internet Explorer 7 und 8</span><span class="vs">Windows</span></summary>
+<div class="vbody">
+<div class="os-block" data-os="win"><h4>Windows</h4><ol>
+<li>Internet Explorer 8: Drücken Sie <kbd>Strg</kbd> + <kbd>Umschalt</kbd> + <kbd>Entf</kbd> oder wählen Sie „Sicherheit“ › „Browserverlauf löschen…“.</li>
+<li>Internet Explorer 7: „Extras“ › „Internetoptionen“ › Registerkarte „Allgemein“ › im Bereich „Browserverlauf“ auf „Löschen…“.</li>
+<li>Wählen Sie „Temporäre Internetdateien“ und klicken Sie auf „Löschen“.</li>
+</ol></div>
+</div></details>
+<details class="variant legacy" id="ie-6" data-browser="ie" data-min="0" data-max="6" data-os="win">
+<summary><span class="vt">Internet Explorer 6</span><span class="vs">Windows</span></summary>
+<div class="vbody">
+<div class="os-block" data-os="win"><h4>Windows</h4><ol>
+<li>Wählen Sie „Extras“ › „Internetoptionen“ › Registerkarte „Allgemein“.</li>
+<li>Klicken Sie im Bereich „Temporäre Internetdateien“ auf „Dateien löschen…“.</li>
+<li>Aktivieren Sie „Alle Offlineinhalte löschen“ und bestätigen Sie mit „OK“.</li>
+</ol></div>
+</div></details>
+</section>
         </div>
-        <div class="page-footer clear">
-            <div class="page-wrapper clear">
-                <div class="span6">
-                    <a href="http://andreasbecker.de" target="_blank">andreasbecker.de</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <a href="impressum.html">Impressum</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <a href="datenschutz.html">Datenschutzerklärung</a>
-                </div>
-                <div class="span6">
-                    Alle Inhalte werden unter der <a href="http://creativecommons.org/licenses/by-nc/3.0/de/" style="text-decoration:underline" target="_blank" title="Öffnet die Creative Commons Lizenz in einem neuen Fenster">CC BY-NC 3.0 DE Lizenz</a>                    bereitgestellt.<br />
-                </div>
-            </div>
+
+        <section id="unbekannt" class="browser unknown">
+            <h2>Ihr Browser fehlt?</h2>
+            <p>Ich würde mich sehr freuen, wenn Sie mir Ihren Browser bzw. Ihre Browserversion <a href="http://blog.andreasbecker.de/impressum/" title="Meine Kontaktadresse finden Sie hier">mitteilen</a> würden. Durch Ihre Mithilfe profitieren auch alle weiteren Besucher!</p>
+        </section>
+
+        <p class="note">Die bereitgestellten Informationen auf dieser Website wurden sorgfältig geprüft und werden unregelmäßig aktualisiert. Jedoch kann keine Haftung oder Garantie dafür übernommen werden, dass alle Angaben zu jeder Zeit vollständig, richtig und in letzter Aktualität dargestellt sind. Alle Angaben können ohne vorherige Ankündigung geändert, entfernt oder ergänzt werden. <span class="stand">Stand: November 2026</span></p>
+    </main>
+    <footer class="site-footer">
+        <div class="wrap">
+            <p class="footer-links">
+                <a href="https://andreasbecker.de" target="_blank" rel="noopener">andreasbecker.de</a>
+                <a href="impressum.html">Impressum</a>
+                <a href="datenschutz.html">Datenschutzerklärung</a>
+            </p>
+            <p class="footer-license">Alle Inhalte werden unter der <a href="https://creativecommons.org/licenses/by-nc/3.0/de/" target="_blank" rel="noopener license" title="Öffnet die Creative Commons Lizenz in einem neuen Fenster">CC BY-NC 3.0 DE Lizenz</a> bereitgestellt.</p>
         </div>
-    </div>
-    <div id="feedbackform">
-        <form id="contactform" action="processForm.php" method="post">
-            <label for="name">Name<input type="text" id="name" name="name" /></label>
-            <label for="email">E-Mail<input type="email" id="email" name="email" /></label>
-            <label for="message">Feedback<textarea id="message" name="message" rows="5" cols="20"></textarea></label>
-            <input type="submit" value="Send!" id="send" />
-        </form>
-        <div id="response"></div>
-    </div>
-    <script src="js/vendor/jquery-1.10.2.min.js"></script>
-    <script src="js/vendor/jquery.browser.min.js"></script>
-    <script src="js/plugins.js"></script>
+    </footer>
     <script src="js/main.js"></script>
 </body>
-
 </html>
