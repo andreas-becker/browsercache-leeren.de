@@ -5,3 +5,8 @@
 	Header set Referrer-Policy "strict-origin-when-cross-origin"
 	Header always set Strict-Transport-Security "max-age=63072000"
 </IfModule>
+
+<IfModule mod_mime.c>
+	AddType application/manifest+json webmanifest
+	AddType image/svg+xml svg
+</IfModule>
