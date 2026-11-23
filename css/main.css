@@ -1,0 +1,294 @@
+/* open-sans-300 - latin */
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../fonts/open-sans-v34-latin-300.eot');
+    /* IE9 Compat Modes */
+    src: local(''), url('../fonts/open-sans-v34-latin-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/open-sans-v34-latin-300.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/open-sans-v34-latin-300.woff') format('woff'), /* Modern Browsers */
+    url('../fonts/open-sans-v34-latin-300.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/open-sans-v34-latin-300.svg#OpenSans') format('svg');
+    /* Legacy iOS */
+}
+
+
+/* open-sans-regular - latin */
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/open-sans-v34-latin-regular.eot');
+    /* IE9 Compat Modes */
+    src: local(''), url('../fonts/open-sans-v34-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/open-sans-v34-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/open-sans-v34-latin-regular.woff') format('woff'), /* Modern Browsers */
+    url('../fonts/open-sans-v34-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/open-sans-v34-latin-regular.svg#OpenSans') format('svg');
+    /* Legacy iOS */
+}
+
+
+/* open-sans-600 - latin */
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/open-sans-v34-latin-600.eot');
+    /* IE9 Compat Modes */
+    src: local(''), url('../fonts/open-sans-v34-latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/open-sans-v34-latin-600.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/open-sans-v34-latin-600.woff') format('woff'), /* Modern Browsers */
+    url('../fonts/open-sans-v34-latin-600.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/open-sans-v34-latin-600.svg#OpenSans') format('svg');
+    /* Legacy iOS */
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background: #F9F9F9;
+    color: #444;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    height: 100%;
+}
+
+h1 {
+    font-size: 46px;
+    font-weight: 300;
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: 300;
+}
+
+li {
+    line-height: 1.6em;
+}
+
+a,
+a:link,
+a:visited {
+    color: #444;
+    text-decoration: none;
+}
+
+a:hover,
+a:active {
+    color: #000;
+    text-decoration: underline;
+}
+
+#feedbackform {
+    background: #E9E9E9;
+    border: 1px solid #D9D9D9;
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 200px;
+}
+
+.clear {
+    clear: both;
+}
+
+.note {
+    background: #E9E9E9;
+    font-size: 14px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.page-container {}
+
+.page-wrapper {
+    margin: 0 auto;
+    width: 80%;
+}
+
+.page-header {
+    background: #E9E9E9;
+    border-bottom: 1px solid #D9D9D9;
+    font-size: 46px;
+    font-weight: 300;
+    line-height: 56px;
+    padding: 20px 0 10px;
+}
+
+.page-content {
+    background: #FFF;
+    min-height: 250px;
+    padding: 20px 0;
+}
+
+.page-footer {
+    background: #F9F9F9;
+    border-top: 1px solid #D9D9D9;
+    float: left;
+    font-size: 14px;
+    padding: 20px 0 10px;
+    width: 100%;
+}
+
+.page-footer .span6 {
+    float: left;
+    width: 49.99%;
+}
+
+.chrome {
+    background-image: url(../images/icon-chrome.svg);
+    background-repeat: no-repeat;
+}
+
+.firefox {
+    background-image: url(../images/icon-firefox.svg);
+    background-repeat: no-repeat;
+}
+
+.msie {
+    background-image: url(../images/icon-msie.svg);
+    background-repeat: no-repeat;
+}
+
+.opera {
+    background-image: url(../images/icon-opera.svg);
+    background-repeat: no-repeat;
+}
+
+.safari {
+    background-image: url(../images/icon-safari.svg);
+    background-repeat: no-repeat;
+}
+
+.webkit {
+    background-image: url(../images/icon-android.svg);
+    background-repeat: no-repeat;
+}
+
+a.macos {
+    display: none;
+}
+
+a.windows {
+    display: inline-block;
+    text-decoration: underline;
+}
+
+.content-box {
+    display: none;
+}
+
+.content-box--visible {
+    display: block;
+}
+
+.content-box .browser-icon span {
+    background-size: contain;
+    display: inline-block;
+    height: 48px;
+    margin-right: 20px;
+    position: relative;
+    top: 0;
+    width: 48px;
+}
+
+.keys {
+    border: 1px solid #444;
+    border-radius: 8px;
+    font-size: .9em;
+    padding: 2px 5px;
+}
+
+
+/* Strg bei Apple durch Cmd ersetzen */
+
+.key-cmd {
+    display: none;
+}
+
+.key-backspace {
+    bottom: -3px;
+    display: none;
+    line-height: 1.2em;
+    padding: 7px 4px 0 30px;
+    position: relative;
+}
+
+.mac .key-cmd {
+    display: inline;
+}
+
+.mac .key-strg {
+    display: none;
+}
+
+.mac .content-box-chrome .key-backspace,
+.mac .content-box-firefox .key-backspace {
+    display: inline-block;
+}
+
+.mac .content-box-chrome .key-entf,
+.mac .content-box-firefox .key-entf {
+    display: none;
+}
+
+.mac a.macos {
+    display: inline-block;
+    text-decoration: underline;
+}
+
+.mac a.windows {
+    display: none;
+}
+
+
+/* Eintrag zu Android nur unter Android anzeigen */
+
+ol.android,
+ol.ipad,
+ol.iphone {
+    display: none;
+}
+
+.android ol,
+.ipad ol,
+.iphone ol {
+    display: none;
+}
+
+.android ol.android,
+.ipad ol.ipad,
+.iphone ol.iphone {
+    display: block;
+}
+
+
+/* Mobile Darstellung */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    h2 {
+        font-size: 28px;
+    }
+    .page-footer .span6 {
+        float: none;
+        width: 100%;
+    }
+    .content-box .browser-icon span {
+        height: 36px;
+        width: 36px;
+    }
+}
