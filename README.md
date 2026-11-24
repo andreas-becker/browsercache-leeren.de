@@ -2,7 +2,7 @@
 
 Anleitungen, um den Browsercache zu leeren – für Chrome, Edge, Firefox, Safari, Opera, Brave, Vivaldi, Samsung Internet und Internet Explorer (6–11), jeweils abhängig von Browserversion und Betriebssystem.
 
-Die Seite ist komplett statisch: HTML, CSS und ein wenig ES5-JavaScript, kein Build-Schritt auf dem Server, keine Abhängigkeiten.
+Die Seite ist komplett statisch: HTML, CSS und ein wenig ES5-JavaScript, kein Build-Schritt auf dem Server, keine Abhängigkeiten. Es gibt eine deutsche (`/`) und eine englische Version (`/en/`).
 
 ## Änderungen (November 2026)
 
@@ -13,6 +13,14 @@ Die Seite ist komplett statisch: HTML, CSS und ein wenig ES5-JavaScript, kein Bu
 - Automatische Browser-Erkennung als Progressive Enhancement: Der erkannte Browser wird hervorgehoben („Ihr Browser“), die passende Version geöffnet und nach oben sortiert, das passende Betriebssystem markiert („Ihr Gerät“). Alle Browser bleiben sichtbar. Direktlinks per Anker, z. B. `#chrome`, `#firefox`. Der Fallback „Unbekannt“ funktioniert jetzt.
 - Entfernt: Affiliate-Links und Feedback-Formular.
 - URLs, SEO-Texte, Lizenz (CC BY-NC 3.0 DE), Haftungsausschluss und Footer sind unverändert.
+
+### Mehrsprachigkeit (Deutsch und Englisch)
+- Deutsch liegt wie bisher unter `/`, die englische Version unter `/en/` (`en/index.html`). Beide haben eigene URLs, Titel, Beschreibungen, Open-Graph-Tags und strukturierte Daten.
+- Die englischen Anleitungen sind keine reine Übersetzung: Menünamen und Tastenbeschriftungen folgen den englischen Browser-Oberflächen (z. B. „Delete browsing data“, Ctrl + Shift + Del, Mac: Cmd + Shift + Delete).
+- `hreflang`-Links (`de`, `en`, `x-default`) auf beiden Startseiten und in der `sitemap.xml`. Im Header gibt es einen Sprachwechsel-Link („English“ / „Deutsch“). Es gibt bewusst keine automatische Weiterleitung nach Browsersprache.
+- Die Browser-Erkennung (`js/main.js`) wählt ihre Texte nach `<html lang>`.
+- Impressum und Datenschutzerklärung gibt es nur auf Deutsch. Die englische Seite verlinkt darauf (mit `hreflang="de"`).
+- Vorschaubilder: `images/og-image.jpg` (Deutsch) und `images/og-image-en.jpg` (Englisch).
 
 ### Design
 - Neues, mobile-first Kartendesign auf Basis von „Andreas UI“ (Primärfarbe `#3382C0`, selbst gehostete Fira Sans, helles und dunkles Farbschema über `prefers-color-scheme`).
@@ -33,7 +41,8 @@ Die Seite ist komplett statisch: HTML, CSS und ein wenig ES5-JavaScript, kein Bu
 
 ### Social Media und SEO
 - Open-Graph- und Twitter-Card-Tags (`summary_large_image`) für schöne Vorschauen in LinkedIn, Facebook, WhatsApp usw.; Vorschaubild `images/og-image.jpg` (1200×630).
-- Canonical-Link auf `https://browsercache-leeren.de/` und strukturierte Daten (JSON-LD, `HowTo`) auf der Startseite.
+- Canonical-Link je Sprache (`https://browsercache-leeren.de/` und `https://browsercache-leeren.de/en/`) und strukturierte Daten (JSON-LD, `HowTo`) auf beiden Startseiten.
+- `sitemap.xml` (mit Sprachalternativen) und `robots.txt` (verweist auf die Sitemap).
 - Die Seiten Impressum und Datenschutz haben keine Social-Tags.
 
 ### Favicons und App-Icons
@@ -50,7 +59,7 @@ Motiv: weißer Mülleimer auf blauem Verlauf (Andreas-UI-Blau). Das Icon wird mi
 | `images/icons/mstile-150x150.png` + `browserconfig.xml` | Windows-Kachel (IE 11 / Edge Legacy) |
 | `site.webmanifest` | Web-App-Manifest mit Name, Farben und Icons |
 
-Eingebunden sind sie im `<head>` aller drei Seiten (`index.html`, `impressum.html`, `datenschutz.html`) zusammen mit `theme-color` (`#3382C0`).
+Eingebunden sind sie im `<head>` aller Seiten (`index.html`, `en/index.html`, `impressum.html`, `datenschutz.html`) zusammen mit `theme-color` (`#3382C0`).
 
 ### Datenschutz und Server
 - Matomo bleibt im Einsatz. Die Opt-out-Einbindung nutzt jetzt Fira Sans. Aus der Datenschutzerklärung wurden Kontaktformular- und CRM-Hinweise entfernt, da es beides nicht mehr gibt. Ansonsten kein inhaltlicher Eingriff in die rechtlichen Texte.
@@ -71,12 +80,17 @@ Eingebunden sind sie im `<head>` aller drei Seiten (`index.html`, `impressum.htm
 ├── favicon.svg
 ├── site.webmanifest
 ├── browserconfig.xml
+├── sitemap.xml
+├── robots.txt
 ├── .htaccess
+├── en/
+│   └── index.html        Englische Version
 ├── css/main.css
-├── js/main.js            Browser-Erkennung (ES5)
+├── js/main.js            Browser-Erkennung (ES5, de + en)
 ├── fonts/                Fira Sans (300/400/600, woff2 + woff)
 └── images/
-    ├── og-image.jpg      Social-Media-Vorschaubild
+    ├── og-image.jpg      Social-Media-Vorschaubild (Deutsch)
+    ├── og-image-en.jpg   Social-Media-Vorschaubild (Englisch)
     └── icons/            PNG-Icons für Geräte und Plattformen
 ```
 
@@ -91,6 +105,7 @@ Die Matomo-Einbindung ist protokoll-relativ und lädt unter `file://` nicht. Das
 
 ## Deployment
 Den Inhalt dieses Ordners auf den Webserver kopieren (Apache mit `mod_headers`, `mod_mime`). Danach:
+- Prüfen, dass `https://browsercache-leeren.de/en/` erreichbar ist, und die `sitemap.xml` bei Google Search Console und Bing Webmaster Tools einreichen.
 - Vorschau-Caches aktualisieren: [LinkedIn Post Inspector](https://www.linkedin.com/post-inspector/) und [Facebook Sharing Debugger](https://developers.facebook.com/tools/debug/).
 - Favicons werden von Browsern stark gecacht. Nach einem Wechsel hilft ein Hard-Reload oder ein privates Fenster zum Prüfen.
 

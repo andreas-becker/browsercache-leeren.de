@@ -1,4 +1,4 @@
-/* browsercache-leeren.de – Browser-Erkennung als "Progressive Enhancement".
+/* browsercache-leeren.de – Browser-Erkennung als "Progressive Enhancement" (de + en).
    Bewusst ES5 (kein let/const, keine Pfeilfunktionen), damit das Skript auch in alten Browsern läuft.
    Ohne JavaScript bleibt die Seite vollständig nutzbar: alle Anleitungen sind im HTML enthalten. */
 (function () {
@@ -10,8 +10,30 @@
     if (!doc.querySelectorAll || !doc.getElementById) { return; }
 
     var detectedBox = doc.getElementById('detected');
-    var container = doc.getElementById('anleitungen');
+    var container = doc.getElementById('anleitungen') || doc.getElementById('instructions');
     if (!detectedBox || !container) { return; }
+
+    // Texte je Sprache (nach <html lang>): Deutsch ist der Standard
+    var STRINGS = {
+        de: {
+            notFoundTitle: 'Ihr Browser wurde nicht automatisch erkannt.',
+            notFoundText: 'Wählen Sie unten einen Browser aus. Wenn Ihrer fehlt, <a href="#unbekannt">sagen Sie mir Bescheid</a>.',
+            detectedBefore: 'Wir haben ', detectedAfter: ' erkannt.',
+            go: 'Anleitung anzeigen', on: ' auf ',
+            yourBrowser: 'Ihr Browser', yourDevice: '\u00B7 Ihr Gerät',
+            ios: 'iPhone/iPad (iOS)'
+        },
+        en: {
+            notFoundTitle: 'Your browser was not detected automatically.',
+            notFoundText: 'Choose a browser below. If yours is missing, <a href="#unknown">let me know</a>.',
+            detectedBefore: 'We detected ', detectedAfter: '.',
+            go: 'Show guide', on: ' on ',
+            yourBrowser: 'Your browser', yourDevice: '\u00B7 Your device',
+            ios: 'iPhone/iPad (iOS)'
+        }
+    };
+    var lang = ((root && root.getAttribute('lang')) || 'de').toLowerCase().slice(0, 2);
+    var T = STRINGS[lang] || STRINGS.de;
 
     var nav = window.navigator || {};
     var ua = nav.userAgent || '';
@@ -27,7 +49,7 @@
         samsung: 'Samsung Internet', ie: 'Internet Explorer'
     };
     var OS_NAMES = {
-        win: 'Windows', mac: 'macOS', linux: 'Linux', android: 'Android', ios: 'iPhone/iPad (iOS)'
+        win: 'Windows', mac: 'macOS', linux: 'Linux', android: 'Android', ios: T.ios
     };
 
     function detectOS() {
@@ -129,23 +151,22 @@
             variant = b ? doc.querySelector('details.variant[data-browser="' + b.id + '"]') : null;
         }
         if (!b || !variant) {
-            detectedBox.innerHTML = '<p><strong>Ihr Browser wurde nicht automatisch erkannt.</strong> ' +
-                'Wählen Sie unten einen Browser aus. Wenn Ihrer fehlt, <a href="#unbekannt">sagen Sie mir Bescheid</a>.</p>';
+            detectedBox.innerHTML = '<p><strong>' + T.notFoundTitle + '</strong> ' + T.notFoundText + '</p>';
             detectedBox.removeAttribute('hidden');
             return;
         }
 
         var section = variant.parentNode;
-        var label = NAMES[b.id] + (b.version ? ' ' + b.version : '') + (theOS ? ' auf ' + OS_NAMES[theOS] : '');
-        detectedBox.innerHTML = '<p>Wir haben <strong>' + escapeHtml(label) + '</strong> erkannt.</p>' +
-            '<a class="go" href="#' + variant.id + '">Anleitung anzeigen</a>';
+        var label = NAMES[b.id] + (b.version ? ' ' + b.version : '') + (theOS ? T.on + OS_NAMES[theOS] : '');
+        detectedBox.innerHTML = '<p>' + T.detectedBefore + '<strong>' + escapeHtml(label) + '</strong>' + T.detectedAfter + '</p>' +
+            '<a class="go" href="#' + variant.id + '">' + T.go + '</a>';
         detectedBox.removeAttribute('hidden');
 
         // passenden Abschnitt hervorheben, nach oben sortieren und die Variante aufklappen
         section.className += ' is-match';
         variant.className += ' is-match';
         var vt = variant.querySelector('.vt');
-        if (vt) { addBadge(vt, 'match-badge', 'Ihr Browser'); }
+        if (vt) { addBadge(vt, 'match-badge', T.yourBrowser); }
         variant.setAttribute('open', 'open');
         if (container.firstChild !== section) { container.insertBefore(section, container.firstChild); }
 
@@ -155,7 +176,7 @@
         for (i = 0; i < blocks.length; i++) {
             if ((' ' + blocks[i].getAttribute('data-os') + ' ').indexOf(' ' + theOS + ' ') !== -1) {
                 blocks[i].className += ' is-device';
-                addBadge(blocks[i].querySelector('h3'), 'device-badge', '\u00B7 Ihr Gerät');
+                addBadge(blocks[i].querySelector('h3'), 'device-badge', T.yourDevice);
             }
         }
     }
